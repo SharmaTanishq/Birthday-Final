@@ -8,6 +8,13 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-styled-components`,
+    `mini-css-extract-plugin`,
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -80
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -34,5 +41,5 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-
+  
 }

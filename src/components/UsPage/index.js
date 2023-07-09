@@ -1,17 +1,27 @@
 import React, { useEffect, useRef, useState } from 'react'
 import "./UsPage.css"
 import { TextWrapper,TextOne,ImageWrapper, BoldText,USHero, 
-  UsWrapper,ImageHolder,BackGround,Image } from './UsPageElements'
+  UsWrapper,ImageHolder,BackGround } from './UsPageElements'
+  import ReactPlayer from 'react-player'
+//Assets and Images
 
-//Locomotive Scroll
-import AOS from 'aos';
+import video from '../../images/UsPage/centerVidFinal.mp4'
+import leftVid from '../../images/UsPage/leftVid.gif'
+import rightVid from '../../images/UsPage/rightVid.gif'
+import mainImg from '../../images/UsPage/imgCenter.jpeg'
+import leftImg from '../../images/UsPage/img1.jpeg'
+import rightImg from '../../images/UsPage/img2.jpeg'
+import knew1 from '../../images/UsPage/knew1.jpeg'
+import knew2 from '../../images/UsPage/knew2.jpeg'
+import knew3 from '../../images/UsPage/knew3.jpeg'
+
 import 'aos/dist/aos.css';
 //Gsap
-import {TimelineLite ,TweenMax, Power3,gsap} from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import {  Power3,gsap} from 'gsap';
+
 
 //Images
-import img from '../../images/UsPage/UsOne.jpg'
+
 
 const UsPage = () => {
     const[click,setClick] = useState(false);
@@ -20,10 +30,6 @@ const UsPage = () => {
     const rotationTweenTwo = useRef(null);
     let imgBg = useRef(null);
     let image = useRef(null);
-    let ImgWrapper = useRef(null);
-    let TextHero = useRef(null);
-    const scrollRef = useRef();
-    const tl = new TimelineLite();
     console.log(click);
     let AOS;
 
@@ -90,7 +96,7 @@ const UsPage = () => {
                         <div    className={`toggle-btn ${click ? "toggle-btn--on" : "toggle-btn"}`}></div>
                          </div>
                     </TextWrapper>
-                    <ImageWrapper className = "ImageWrapper" ref = {el=> ImgWrapper =el}   >
+                    <ImageWrapper className = "ImageWrapper"    >
                          <ImageHolder className = "Image-Holder">
                              <BackGround  classname = "imgBgCard" ref = {el => imgBg = el } ></BackGround>
                              <div className = "ImageCheck" ref={el=>image=el }  ></div>
@@ -105,13 +111,20 @@ const UsPage = () => {
               <p className  = "section-pOne" data-aos="fade-up">I was <p className = "sectionBoldText">ENOUGH</p></p>
               <div className = "section-photo-wrapper">
                 <div className = "section-photo" data-aos="fade-right">
-
+                  <img className = "img-video" src = {leftVid}/>
                 </div>
                 <div className = "section-photo" data-aos="fade-up">
-                
+                 
+                <ReactPlayer
+                 className='react-player fixed-bottom'
+                url = {video}
+                width='100%'
+                height='100%'
+                controls = {true}
+                />
                 </div>
                 <div className = "section-photo"data-aos="fade-left">
-                
+                <img className = "img-video" src = {rightVid}/>
                 </div>
               </div>
             </div>
@@ -130,19 +143,71 @@ const UsPage = () => {
             </div>
 
             <div  className={`section-two ${click ? "section-two--on " : "section-two"}`}>
-              <p className  = "section-pOne">Then you <p className = "sectionBoldText"> SMILED </p> over your shoulder</p>
-              <p className  = "section-pTwo">For a minute I was stone-cold sober</p>
+              <p className  = "section-pOne" data-aos="fade-up">Then you <p className = "sectionBoldText"> SMILED </p> over your shoulder</p>
+              <p className  = "section-pTwo" data-aos="fade-up" data-aos-delay= "50">For a minute I was stone-cold sober</p>
               <div className = "section-photo-wrapper">
-                <div className = "section-photo">
-
+                <div className = "section-photo-two" data-aos="fade-up">
+                  <img className = "img-photo" src = {leftImg}></img>
                 </div>
-                <div className = "section-photo">
-                
+                <div className = "section-photo-two" data-aos="fade-up">
+                <img className = "img-photo"  src = {mainImg}></img>
                 </div>
-                <div className = "section-photo">
-                
+                <div className = "section-photo-two" data-aos="fade-up">
+                <img className = "img-photo"  src = {rightImg}></img>
                 </div>
               </div>
+            </div>
+
+            
+            <div  className = "section-quote" data-aos="fade-in">
+            <blockquote className="quote-2">
+   
+            I pulled you closer to my chest <br/>
+            And you asked me to stay over <br/>
+            I said, I already told ya <br/>
+            I think that you should get some rest
+
+
+              </blockquote>
+
+            </div>
+
+            <div  className={`section-two ${click ? "section-two--on " : "section-two"}`}>
+              <p className  = "section-pOne" data-aos="fade-up">I knew  <p className = "sectionBoldText"> I LOVED </p> you then</p>
+              <p className  = "section-pOne" data-aos="fade-up" data-aos-delay= "50">But you'd never know</p>
+              <div className = "section-photo-wrapper">
+                <div className = "section-photo-two" data-aos="fade-up">
+                  <img className = "img-photoTwo" src = {knew1}></img>
+                </div>
+                <div className = "section-photo-two" data-aos="fade-up">
+                <img className = "img-photoTwo"  src = {knew3}></img>
+                </div>
+                <div className = "section-photo-two" data-aos="fade-up">
+                <img className = "img-photoTwo"  src = {knew2}></img>
+                </div>
+              </div>
+            </div>
+
+            <div  className = "section-quote" data-aos="fade-in">
+            <blockquote className="quote-2">
+   
+            'Cause I played it cool when I was scared of letting go<br/>
+            I know I needed you<br/>
+            But I never showed<br/>
+            But I wanna stay with you until we're grey and old
+
+
+              </blockquote>
+
+            </div>
+
+            <div  className = "section-quote" data-aos="fade-in">
+            <blockquote className="quote-3">
+   
+            JUST SAY YOU WON'T LET GO
+
+              </blockquote>
+
             </div>
 
         </div>

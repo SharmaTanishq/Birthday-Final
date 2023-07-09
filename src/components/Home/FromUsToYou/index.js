@@ -1,8 +1,8 @@
-import React,{useEffect, useRef} from 'react'
+import React,{useEffect} from 'react'
 import './Songs.css'
 import  petals from '../../../images/HomePage/petals.svg'
 
-import AOS from 'aos';
+
 import 'aos/dist/aos.css';
 
 //images
@@ -46,7 +46,7 @@ const UsToYou = () => {
                 </div>
                 <h1 className = "song-h1" data-aos="fade-down">The songs we dedicate to you</h1>
                 <div className = "songSection-divider" data-aos="fade-down" data-aos-delay = "50"></div>
-                <p className = "quote-p" data-aos="fade-down" data-aos-delay = "100">Let us see what everyone wants you to groove to</p>
+                <p className = "quote-p" data-aos="fade-down" data-aos-delay = "100">All we need is a good friend and a song to sing along :)</p>
                 <div className = "songSection-wrapper">
                     {/* JANVI */}
                     <div className = "card-container" data-aos="fade-right">
@@ -65,7 +65,7 @@ const UsToYou = () => {
                                 </div>
 
                             </div>
-                            <div className = "info">
+                            <div className = "info-music">
                                 <div className = "name">
                                     <h3 className = "song"> Count On Me </h3>
                                     <p className = "song"> Bruno Mars </p>
@@ -79,7 +79,7 @@ const UsToYou = () => {
                                 <p className = "name-p">Janvi Kathuria</p>
                                 </div>
                                 <div className = "circle-img">
-                                    <img src = {Janvi}></img>
+                                    <img src = {Janvi} alt = "Janvi"></img>
                                 </div>
                             </div>
 
@@ -106,7 +106,7 @@ const UsToYou = () => {
                                 </div>
 
                             </div>
-                            <div className = "info">
+                            <div className = "info-music">
                                 <div className = "name">
                                     <h3 className = "song"> Baarishein </h3>
                                     <p className = "song"> Anuv Jain </p>
@@ -120,12 +120,12 @@ const UsToYou = () => {
                                 <p className = "name-p">Ojasvi Teotea</p>
                                 </div>
                                 <div className = "circle-img">
-                                    <img   src = {Ojay}></img>
+                                    <img   src = {Ojay} alt =""></img>
                                 </div>
                             </div>
 
                         </div>
-                        <div className="overlay-image"> <img src = {"https://m.media-amazon.com/images/I/71Y5ju1CGiL._SS500_.jpg"}/></div>
+                        <div className="overlay-image"> <img src = {"https://m.media-amazon.com/images/I/71Y5ju1CGiL._SS500_.jpg"} alt =""/></div>
                         <div className="overlay"></div>
 
                     </div>
@@ -147,7 +147,7 @@ const UsToYou = () => {
                                 </div>
 
                             </div>
-                            <div className = "info">
+                            <div className = "info-music">
                                 <div className = "name">
                                     <h3 className = "song"> Alag Aasmaan </h3>
                                     <p className = "song"> Anuv Jain </p>
@@ -158,15 +158,15 @@ const UsToYou = () => {
                             <div className = "action">
                                 <div >
                                 <p className = "text-p" >Dedicated By :</p>
-                                <p className = "name-p">Saksham Bisnoi</p>
+                                <p className = "name-p">Saksham Bishnoi</p>
                                 </div>
                                 <div className = "circle-img">
-                                    <img src = {Saksham}></img>
+                                    <img src = {Saksham} alt =""></img>
                                 </div>
                             </div>
 
                         </div>
-                        <div className="overlay-image"><img src = {"https://www.bollywoodbabu.in/wp-content/uploads/2020/08/alag-aasmaan-anuv-jain-1.png"}/></div>
+                        <div className="overlay-image"><img src = {"https://www.bollywoodbabu.in/wp-content/uploads/2020/08/alag-aasmaan-anuv-jain-1.png"} alt =""/></div>
                         <div className="overlay"></div>
 
                     </div>
@@ -188,7 +188,7 @@ const UsToYou = () => {
                                 </div>
 
                             </div>
-                            <div className = "info">
+                            <div className = "info-music">
                                 <div className = "name">
                                     <h3 className = "song"> I'll be there for you </h3>
                                     <p className = "song"> The Rembrandts </p>
@@ -199,15 +199,15 @@ const UsToYou = () => {
                             <div className = "action">
                                 <div >
                                 <p className = "text-p" >Dedicated By :</p>
-                                <p className = "name-p">Monali Mallic</p>
+                                <p className = "name-p">Monali Mallick</p>
                                 </div>
                                 <div className = "circle-img">
-                                    <img src = {Monali}></img>
+                                    <img src = {Monali} alt =""></img>
                                 </div>
                             </div>
 
                         </div>
-                        <div className="overlay-image"><img src ={"https://images-na.ssl-images-amazon.com/images/I/81BTT1JdBnL._AC_UL600_SR600,600_.jpg"}/></div>
+                        <div className="overlay-image"><img src ={"https://images-na.ssl-images-amazon.com/images/I/81BTT1JdBnL._AC_UL600_SR600,600_.jpg"} alt =""/></div>
                         <div className="overlay"></div>
 
                     </div>
@@ -229,7 +229,7 @@ const UsToYou = () => {
                                 </div>
 
                             </div>
-                            <div className = "info">
+                            <div className = "info-music">
                                 <div className = "name">
                                     <h3 className = "song"> Get you the moon (feat. Snøw) </h3>
                                     <p className = "song"> Kina </p>
@@ -243,12 +243,12 @@ const UsToYou = () => {
                                 <p className = "name-p">Anukriti Mudgil</p>
                                 </div>
                                 <div className = "circle-img">
-                                    <img style = {{width:"100px"}} src =  {Anukriti}></img>
+                                    <img style = {{width:"100px"}} src =  {Anukriti} alt =""></img>
                                 </div>
                             </div>
 
                         </div>
-                        <div className="overlay-image"> <img src = {"https://upload.wikimedia.org/wikipedia/en/thumb/0/0b/Get_You_The_Moon.png/220px-Get_You_The_Moon.png"}/></div>
+                        <div className="overlay-image"> <img src = {"https://upload.wikimedia.org/wikipedia/en/thumb/0/0b/Get_You_The_Moon.png/220px-Get_You_The_Moon.png"} alt =""/></div>
                         <div className="overlay"></div>
 
                     </div>
@@ -270,7 +270,7 @@ const UsToYou = () => {
                                 </div>
 
                             </div>
-                            <div className = "info">
+                            <div className = "info-music">
                                 <div className = "name">
                                     <h3 className = "song"> Tum Hi Ho Bandhu </h3>
                                     <p className = "song"> Neeraj Shridhar & Kavita seth </p>
@@ -284,12 +284,12 @@ const UsToYou = () => {
                                 <p className = "name-p">Roahan Roy</p>
                                 </div>
                                 <div className = "circle-img">
-                                    <img src = {Roahan}></img>
+                                    <img src = {Roahan} alt =""></img>
                                 </div>
                             </div>
 
                         </div>
-                        <div className="overlay-image"><img src = {"https://upload.wikimedia.org/wikipedia/en/thumb/5/5d/Cocktail_2012_poster.jpg/220px-Cocktail_2012_poster.jpg"}/></div>
+                        <div className="overlay-image"><img src = {"https://upload.wikimedia.org/wikipedia/en/thumb/5/5d/Cocktail_2012_poster.jpg/220px-Cocktail_2012_poster.jpg"} alt =""/></div>
                         <div className="overlay"></div>
 
                     </div>
@@ -311,7 +311,7 @@ const UsToYou = () => {
                                 </div>
 
                             </div>
-                            <div className = "info">
+                            <div className = "info-music">
                                 <div className = "name">
                                     <h3 className = "song">  You Are My Sunshine </h3>
                                     <p className = "song"> Jasmine Thompson </p>
@@ -325,12 +325,12 @@ const UsToYou = () => {
                                 <p className = "name-p">Drishya Chadha</p>
                                 </div>
                                 <div className = "circle-img">
-                                    <img src = {Drishya}></img>
+                                    <img src = {Drishya} alt =""></img>
                                 </div>
                             </div>
 
                         </div>
-                        <div className="overlay-image"><img src="https://images.genius.com/875025f47f9ccb55069d211d6db0c1b7.640x640x1.jpg"/></div>
+                        <div className="overlay-image"><img src="https://images.genius.com/875025f47f9ccb55069d211d6db0c1b7.640x640x1.jpg" alt =""/></div>
                         <div className="overlay"></div>
 
                     </div>
@@ -352,7 +352,7 @@ const UsToYou = () => {
                                 </div>
 
                             </div>
-                            <div className = "info">
+                            <div className = "info-music">
                                 <div className = "name">
                                     <h3 className = "song"> Say you won't let go </h3>
                                     <p className = "song"> James Arthur </p>
@@ -366,7 +366,7 @@ const UsToYou = () => {
                                 <p className = "name-p">Tanishq Sharma</p>
                                 </div>
                                 <div className = "circle-img">
-                                    <img  src ={Tanishq}></img>
+                                    <img  src ={Tanishq} alt =""></img>
                                 </div>
                             </div>
 

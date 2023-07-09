@@ -1,7 +1,17 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/node-apis/
- */
+let MiniCssExtractPlugin = require('./node_modules/mini-css-extract-plugin');
 
-// You can delete this file if you're not using it
+module.exports = {
+  plugin: [
+    new MiniCssExtractPlugin({
+      ignoreOrder: true,
+    }),
+  ],
+ __esModule: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader],
+      },
+    ],
+  },
+};

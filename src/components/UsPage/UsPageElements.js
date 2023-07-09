@@ -9,7 +9,7 @@ export const USHero = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      max-width: 1400px;
+      max-width: 1300px;
       z-index: 1;
 `
 export const UsWrapper = styled.div`

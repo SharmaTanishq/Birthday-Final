@@ -41,6 +41,11 @@ align-items:center;
 
 
 `
+export const IconNav = styled.img`
+filter : ${({change}) =>(change? "grayscale(1) invert(1)" : "filter: grayscale(0) invert(0)")};
+width: 120px;
+height:auto;
+`
 export const NavIcon = styled(DiScala)`
 margin: 0 0.5rem 0 2rem;
 

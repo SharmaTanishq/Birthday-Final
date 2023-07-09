@@ -25,7 +25,7 @@
 .quote-p  {
     z-index: 1;
     margin-bottom: 30px;
-    font-size: var(--font-size-s);
+    font-size: 1.1vw;
     color: #171717;
     
 }
@@ -63,6 +63,7 @@
     color: #171717;
     font-weight: 600;
     z-index: 1;
+    text-transform: uppercase;
 
     
 }
@@ -185,15 +186,15 @@
 	box-shadow: 0 3px 15px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);
 }
 
-.info{
+.info-music{
     text-align: center;
 	color: #fff;
 }
-.info h3 {
+.info-music  h3 {
 	font-weight: 600;
 	font-size: 14px;
 }
-.info p {
+.info-music p {
 	font-size: 14px;
 	color: #999;
 	margin: 7px 0;
@@ -236,5 +237,30 @@
     }
     .quote-p{
         font-size: var(--font-size-m);
+    }
+}
+
+@media  screen and (max-width:1400px) {
+    .song-h1{
+        font-size: var(--font-size-xxl);
+        
+    }
+    .quote-p{
+        font-size: 1.5vw;
+    }
+    .card-container{
+        width: 280px;
+        height: 450px;
+        margin: 5% auto 0;
+      position: relative;
+      background: transparent;
+        box-shadow: 0 8px 17px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);
+        overflow: hidden;
+        z-index: 0;
+        border-radius: 7px;
+        
+        
+        
+        
     }
 }

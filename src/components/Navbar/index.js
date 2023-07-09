@@ -1,15 +1,15 @@
 import React, { useEffect, useState,useRef } from 'react'
 import {FaBars,FaTimes} from "react-icons/fa"
-import { Nav,NavbarContainer,NavLogo,NavIcon,MobileIcon, NavMenu, NavItem, NavLinks} from './NavbarElements';
+import { Nav,NavbarContainer,NavLogo,MobileIcon, NavMenu, NavItem, NavLinks,IconNav} from './NavbarElements';
 //Gsap
-import {TimelineLite ,TweenMax, Power3,gsap} from 'gsap';
-
+import {TimelineLite , Power3} from 'gsap';
+import Logo from '../../images/Logo.png'
 
 const Navbar = () => {
      const[click,setClick] = useState(false);
      const [scroll,setScroll] = useState(false);
     let navbar = useRef(null)
-    let tl = new TimelineLite();
+   
      const handleClick = () => setClick(!click);
      const changeNav = () =>{
          if(window.scrollY >=80){
@@ -19,6 +19,7 @@ const Navbar = () => {
          }
      }
      useEffect(()=>{
+        let tl = new TimelineLite();
          changeNav()
          window.addEventListener("scroll",changeNav);
          tl.from(navbar,1.5,{y: -380, ease: Power3.easeOut,opacity:0})
@@ -28,7 +29,7 @@ const Navbar = () => {
             <Nav active = {scroll} click = {click}>
                 <NavbarContainer ref = {el => navbar = el} >
                     <NavLogo change={scroll} to = "/">
-                        LOREM
+                       <IconNav change = {scroll} src = {Logo}></IconNav>
                     </NavLogo>
                     <MobileIcon onClick = {handleClick}>
                         {click? <FaTimes/>: <FaBars/>}
@@ -43,9 +44,7 @@ const Navbar = () => {
                         <NavItem>
                             <NavLinks change={scroll} to ="/Us">Us</NavLinks>
                         </NavItem>
-                        <NavItem>
-                            <NavLinks change={scroll} to ="/Gallery">Gallery</NavLinks>
-                        </NavItem>
+                       
 
                     </NavMenu>
 
